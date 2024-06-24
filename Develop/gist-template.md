@@ -16,6 +16,7 @@ This tutorial aims to provide a thorough understanding of various components of 
 - Boundaries
 - Back-references
 - Look-ahead and Look-behind
+- Example
 
 # Regex Components
 
@@ -51,6 +52,12 @@ Back-references (\1, \2, etc.) allow you to match the same text that was matched
 
 ### Look-ahead and Look-behind
 Look-ahead ((?=...)) and look-behind ((?<=...)) assertions allow you to assert whether a pattern is or isn't followed by another pattern, without including it in the match.
+
+### Example
+
+Matching a URL – /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/
+
+The regex pattern /^(https?://)?([\da-z.-]+).([a-z.]{2,6})([/\w .-])/?$/ matches URLs with optional HTTP or HTTPS schemes. This pattern is designed to cover various valid URL formats while being flexible enough to accommodate different schemes, domain names, paths, and optional trailing slashes.
 
 ### Author
 This tutorial is authored by Ezra J Rogers.
